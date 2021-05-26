@@ -1,6 +1,5 @@
-open List
-
-let at (p: int) (xs: 'a list) =
-    try List.nth xs p with
-       | Failure _ -> None
-       | Invalid_argument _ -> None;;
+let at p xs =
+    let rec aux n = function
+        | [] -> None
+        | h :: t -> if (n == p) then Some(h) else aux (n+1) t
+    in aux 0 xs;;
