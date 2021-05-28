@@ -18,5 +18,5 @@ let encode l =
     in aux 0 [] l;;
 (* Reusing solution in problem 10 *)
 
-let toRle l = l |> encode |> List.map Rle.make;;
+let to_tle l = l |> encode |> List.map Rle.make;;
 
